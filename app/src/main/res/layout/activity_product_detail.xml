@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryVariant">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewProductDetail"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textViewProductNameDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/textViewProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewSellerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seller Name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewSellerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seller Phone"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonBackToMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Main"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

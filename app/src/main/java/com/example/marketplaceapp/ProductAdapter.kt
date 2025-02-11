@@ -2,8 +2,6 @@ package com.example.marketplaceapp
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.request.RequestListener
+
 
 class ProductAdapter(private val context: Context, private val productList: List<Product>) :
     RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
@@ -32,10 +29,10 @@ class ProductAdapter(private val context: Context, private val productList: List
         val product = productList[position]
         Glide.with(context)
             .load("${product.imageUrl}")
-            .error(R.drawable.ic_broken_image) // Placeholder for failed image loading
+            .error(R.drawable.ic_broken_image)
             .into(holder.imageViewProduct)
         holder.textViewProductName.text= "${product.productName}"
-        holder.textViewProductPrice.text = "${product.productPrice}"
+        holder.textViewProductPrice.text = "${product.productPrice}₸"
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ProductDetailActivity::class.java)
             intent.putExtra("PRODUCT", product)

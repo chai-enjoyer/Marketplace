@@ -70,8 +70,8 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("com.github.bumptech.glide:glide:4.15.1")
     kapt("com.github.bumptech.glide:compiler:4.15.1")
-    implementation("com.google.firebase:firebase-database-ktx:21.0.0") // Use the latest version
-    implementation("com.google.firebase:firebase-storage-ktx:21.0.0")  // Ensure consistency
+    implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation("com.google.firebase:firebase-storage-ktx:21.0.0")
     implementation("com.google.firebase:firebase-auth-ktx:22.1.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation(libs.androidx.cardview)

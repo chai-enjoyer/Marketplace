@@ -28,11 +28,11 @@ class ProductDetailActivity : AppCompatActivity() {
 
         Glide.with(this)
             .load(product.imageUrl)
-            .error(R.drawable.ic_broken_image) // Placeholder for failed image loading
+            .error(R.drawable.ic_broken_image)
             .into(imageViewProductDetail)
         textViewProductNameDetail.text = product.productName
-        textViewProductPrice.text = product.productPrice
-        textViewProductDescription.text = product.productDescription
+        textViewProductPrice.text = "${product.productPrice}₸"
+        textViewProductDescription.text = "Description: ${ product.productDescription }"
         textViewSellerName.text = "Seller: ${product.sellerName}"
         textViewSellerPhone.text = "Phone: ${product.sellerPhone}"
 

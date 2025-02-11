@@ -2,34 +2,39 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimaryVariant">
+    android:background="@color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="0dp">
 
         <ImageView
             android:id="@+id/imageViewProductDetail"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scaleType="centerCrop" />
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="-150dp"/>
 
         <TextView
             android:id="@+id/textViewProductNameDetail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:background="@drawable/main_text_back"
             android:text="Product Name"
             android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textStyle="bold"
             android:textSize="24sp"
             android:gravity="center"
-            android:paddingTop="16dp" />
+            android:paddingTop="90dp" />
 
         <TextView
             android:id="@+id/textViewProductPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
             android:text="Price"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -38,7 +43,8 @@
         <TextView
             android:id="@+id/textViewProductDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:layout_height="100dp"
             android:text="Description"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -50,6 +56,7 @@
             android:id="@+id/textViewSellerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
             android:text="Seller Name"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -58,7 +65,8 @@
         <TextView
             android:id="@+id/textViewSellerPhone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:layout_height="220dp"
             android:text="Seller Phone"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -67,9 +75,10 @@
         <Button
             android:id="@+id/buttonBackToMain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="Back to Main"
-            android:backgroundTint="@color/teal_200"
+            android:textStyle="bold"
+            android:backgroundTint="@color/dark_blue"
             android:textColor="@color/white"
             android:layout_marginTop="16dp" />
 

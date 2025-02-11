@@ -4,7 +4,6 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Product(
-    val productId: String? = null,
     val productName: String? = null,
     val imageUrl: String? = null,
     val productPrice: String? = null,
@@ -19,11 +18,9 @@ data class Product(
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
-        parcel.readString() ?: "",
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(productId)
         parcel.writeString(productName)
         parcel.writeString(imageUrl)
         parcel.writeString(productPrice)
@@ -48,7 +45,6 @@ data class Product(
 
     fun toMap(): Map<String, Any?> {
         return mapOf(
-            "productId" to productId,
             "productName" to productName,
             "imageUrl" to imageUrl,
             "productPrice" to productPrice,

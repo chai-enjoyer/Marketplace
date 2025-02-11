@@ -1,15 +1,22 @@
-<!-- res/layout/activity_post_product.xml -->
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
+
+        <!-- Product ID -->
+        <EditText
+            android:id="@+id/etProductId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product ID"
+            android:inputType="text"
+            android:padding="8dp" />
 
         <!-- Product Name -->
         <EditText
@@ -18,8 +25,7 @@
             android:layout_height="wrap_content"
             android:hint="Product Name"
             android:inputType="text"
-            android:padding="8dp"
-            android:marginBottom="8dp" />
+            android:padding="8dp" />
 
         <!-- Product Price -->
         <EditText
@@ -28,8 +34,7 @@
             android:layout_height="wrap_content"
             android:hint="Product Price"
             android:inputType="numberDecimal"
-            android:padding="8dp"
-            android:marginBottom="8dp" />
+            android:padding="8dp" />
 
         <!-- Product Description -->
         <EditText
@@ -38,8 +43,34 @@
             android:layout_height="wrap_content"
             android:hint="Product Description"
             android:inputType="textMultiLine"
-            android:padding="8dp"
-            android:marginBottom="8dp" />
+            android:padding="8dp" />
+
+        <!-- Image URL -->
+        <EditText
+            android:id="@+id/etImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image URL"
+            android:inputType="textUri"
+            android:padding="8dp" />
+
+        <!-- Seller Name -->
+        <EditText
+            android:id="@+id/etSellerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seller Name"
+            android:inputType="text"
+            android:padding="8dp" />
+
+        <!-- Seller Phone -->
+        <EditText
+            android:id="@+id/etSellerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seller Phone"
+            android:inputType="phone"
+            android:padding="8dp" />
 
         <!-- Submit Button -->
         <Button
@@ -47,8 +78,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:padding="12dp"
+            android:padding="16dp"
             android:backgroundTint="@color/teal_700"
             android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_gravity="center_horizontal|bottom"/>
     </LinearLayout>
 </ScrollView>

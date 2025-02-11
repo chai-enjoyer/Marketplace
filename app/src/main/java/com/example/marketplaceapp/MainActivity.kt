@@ -1,6 +1,9 @@
 package com.example.marketplaceapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +27,13 @@ class MainActivity : AppCompatActivity() {
         recyclerViewProducts.adapter = productAdapter
 
         database = FirebaseDatabase.getInstance().reference.child("products")
+        val btnPostProduct = findViewById<Button>(R.id.postProductButton)
+
+        btnPostProduct.setOnClickListener {
+            // Start PostProductActivity when the button is clicked
+            val intent = Intent(this, PostProductActivity::class.java)
+            startActivity(intent)
+        }
 
         
 

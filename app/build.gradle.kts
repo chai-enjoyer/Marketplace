@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id ("com.google.gms.google-services")
+    kotlin("kapt")
 }
 
 android {
@@ -68,7 +69,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("com.github.bumptech.glide:glide:4.15.1")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
     implementation("com.google.firebase:firebase-database-ktx:21.0.0") // Use the latest version
     implementation("com.google.firebase:firebase-storage-ktx:21.0.0")  // Ensure consistency
     implementation("com.google.firebase:firebase-auth-ktx:22.1.1")

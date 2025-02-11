@@ -7,9 +7,9 @@ plugins {
     id("com.google.gms.google-services") version "4.4.0" apply false
 }
 
-//allprojects {
-//    repositories {
-//        google()
-//        mavenCentral()
-//    }
-//}
+buildscript {
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.2.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0")
+    }
+}
